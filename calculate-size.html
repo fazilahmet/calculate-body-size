@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="style.css">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+<form name="bmiForm">
+    <div class="bmi-calculator">
+      <h1 style="margin-bottom: 1em;">Bedeninizi Hesaplayın</h1>
+      <div class="bmi-calculator-weight">
+        <input class="weight-slider" name="realweight" id="myWeight" type="range" min="25" max="180" value="60"/>
+        <p style="margin-top: 1.8em;">
+          Kilo: 
+          <input style="width: 80px;text-align: center;" id="inputWeight" type="number" value="60" min="25" max="180" oninput="showValWeight(this.value)"/>
+          <span id="weight"></span> kg
+        </p>
+      </div>
+      <div class="bmi-calculator-height">
+        <input class="height-slider" name="realheight" id="myHeight" type="range" min="100" max="220" value="160">
+        <p style="margin-top: 1.8em;">
+          Boy:
+          <input style="width: 80px;text-align: center;" id="inputHeight" type="number" value="160" min="100" max="220" oninput="showValHeight(this.value)"/>
+          <span id="height"></span> cm
+        </p>
+      </div>
+      <div style="margin-bottom: 20px;;">
+        <label>
+          <input type="radio" class="option-input radio" name="example" id="kadin" checked />
+          Kadın 
+        </label>&nbsp;&nbsp;&nbsp;
+        <label>
+          <input type="radio" class="option-input radio" id="erkek" name="example" />
+          Erkek
+        </label>
+      
+      </div>
+      <input class="gumb" type="button" value="Hesapla" onclick="calculateBmi()" style="margin-top: 2rem">
+     <p style="margin-top: 1em;font-size: 1.2em;">
+      <div class="">
+        <span style="font-size: 20px; color: rebeccapurple;"  id="evaluationMessage"></span>
+        <span id="yourbmi" style="font-size: 1.2em;margin-left: 8px;"></span>
+
+      </div>
+      
+     </p>
+     <p></p>
+     <p>
+       
+     </p>
+    </div>
+    </form>
+    <script src="site.js"></script>
+ 
